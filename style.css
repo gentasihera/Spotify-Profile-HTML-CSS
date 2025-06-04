@@ -1,0 +1,269 @@
+   * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: sans-serif;
+      background-color: #1A1818;
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100px;
+      height: 100%;
+      background: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+    }
+
+    .sidebar img {
+      width: 50px;
+      margin-bottom: 40px;
+    }
+
+    .sidebar-item {
+      width: 100%;
+      padding: 12px 0;
+      font-size: 12px;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: color 0.3s;
+    }
+
+    .sidebar-item i {
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
+
+    .sidebar-item span {
+      font-size: 15px;
+      margin-top: 2px;
+    }
+
+    .sidebar-item:hover {
+      color: #1db954;
+    }
+
+    main {
+      margin-left: 100px;
+      padding: 30px;
+      height: 100vh;
+      overflow-y: auto;
+      flex: 1;
+    }
+
+    .profile {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .profile img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .profile h1 {
+      margin: 10px 0;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 10px;
+    }
+
+    .stats div {
+      text-align: center;
+    }
+
+    .stats span {
+      color: #1db954;
+      font-weight: bold;
+      font-size: 30px;
+      display: block;
+    }
+
+    .artist {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .artist img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .artist img:hover {
+      transform: scale(1.05);
+}
+
+    .track {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-bottom: 16px; 
+    }
+
+    .section-title {
+        justify-content: space-between;
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      gap: 10px;
+    }
+    .section-title h2 {
+      font-size: 24px;
+    }
+
+    .see-more {
+      padding: 6px 12px;
+      border: 1px solid white;
+      border-radius: 24px;
+      color: white;
+      font-size: 12px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .see-more:hover {
+      background: #1db954;
+      border-color: #1db954;
+      color: black;
+    }
+
+    @media (max-width: 600px) {
+      .sidebar {
+        flex-direction: row;
+        position: fixed;
+        bottom: 0;
+        top: auto;
+        height: 60px;
+        width: 100%;
+        justify-content: space-around;
+        padding: 0;
+        z-index: 1000;
+      }
+
+      .sidebar img {
+        display: none;
+      }
+
+      .sidebar-item {
+        font-size: 10px;
+        padding: 6px 0;
+      }
+
+      .sidebar-item i {
+        font-size: 18px;
+        margin-bottom: 2px;
+      }
+
+      main {
+        margin: 0;
+        padding: 20px 15px;
+        margin-bottom: 70px;
+      }
+      
+.track {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+      .section-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+      }
+
+      .section-title h2 {
+        font-size: 20px;
+      }
+    }
+
+    .top-artist {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 20px;
+    }
+    .artist-card {
+      text-align: center;
+    }
+    .artist-card img {
+      width: 100%;
+      max-width: 160px;
+      border-radius: 50%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      margin-bottom: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+
+    .artist-card p {
+      font-size: 14px;
+      color: white;
+    }
+
+    .artist-card:hover img {
+      transform: scale(1.05);
+    }
+
+.top-track {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+       .recent-track {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .recent-track img {
+      width: 60px;
+      height: 60px;
+      border-radius: 4px;
+      margin-right: 20px;
+    }
+
+    .track-info {
+      flex-grow: 1;
+    }
+
+    .track-title {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .track-artist {
+      color: #b3b3b3;
+      font-size: 14px;
+    }
+
+    .track-duration {
+      color: #b3b3b3;
+      font-size: 14px;
+      margin-left: auto;
+    }
+
